@@ -1,0 +1,17 @@
+# docker compose up --build   ->  http://localhost:8080   (NOT RUN in the authoring sandbox)
+services:
+  api:
+    build: .
+    env_file: [.env]
+    environment:
+      WZ_CORS_ORIGINS: http://localhost:8080
+      WZ_SQLITE_PATH: /app/data/wardzero.db
+    volumes: [wz-data:/app/data]
+    restart: unless-stopped
+  web:
+    build: ./apps/web
+    ports: ["8080:80"]
+    depends_on: [api]
+    restart: unless-stopped
+volumes:
+  wz-data:

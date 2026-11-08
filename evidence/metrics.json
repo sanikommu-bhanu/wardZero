@@ -1,0 +1,224 @@
+{
+  "feature_count": 59,
+  "dataset": {
+    "n_rows": 59100,
+    "n_patients": 300,
+    "split_sizes_rows": {
+      "train": 41370,
+      "val": 8865,
+      "test": 8865
+    },
+    "split_sizes_patients": {
+      "test": 45,
+      "train": 210,
+      "val": 45
+    },
+    "seed": 2026,
+    "patients_per_scenario": 60,
+    "n_steps": 400
+  },
+  "models": {
+    "risk_class": {
+      "accuracy": 0.9907501410039481,
+      "per_class": {
+        "HIGH": {
+          "precision": 0.99965858654831,
+          "recall": 0.991869918699187,
+          "f1": 0.9957490222751233,
+          "support": 2952
+        },
+        "LOW": {
+          "precision": 0.9996028594122319,
+          "recall": 0.9891923757123207,
+          "f1": 0.9943703703703703,
+          "support": 5089
+        },
+        "MEDIUM": {
+          "precision": 0.9122222222222223,
+          "recall": 0.9963592233009708,
+          "f1": 0.9524361948955916,
+          "support": 824
+        }
+      },
+      "macro_f1": 0.980851862513695,
+      "confusion_matrix": {
+        "labels": [
+          "HIGH",
+          "LOW",
+          "MEDIUM"
+        ],
+        "matrix": [
+          [
+            2928,
+            0,
+            24
+          ],
+          [
+            0,
+            5034,
+            55
+          ],
+          [
+            1,
+            2,
+            821
+          ]
+        ]
+      },
+      "roc_auc_ovr_macro": 0.9998192204035016,
+      "classes_order": [
+        "HIGH",
+        "LOW",
+        "MEDIUM"
+      ],
+      "global_feature_importance_top15": [
+        [
+          "heart_rate_max",
+          0.1476262556275695
+        ],
+        [
+          "heart_rate_mean",
+          0.13688989632654658
+        ],
+        [
+          "heart_rate_last",
+          0.11656078807201707
+        ],
+        [
+          "resp_rate_mean",
+          0.06816174597134891
+        ],
+        [
+          "resp_rate_max",
+          0.06288904780644991
+        ],
+        [
+          "temperature_max",
+          0.044091216921604275
+        ],
+        [
+          "temperature_last",
+          0.042715478808941304
+        ],
+        [
+          "resp_rate_last",
+          0.04149743565535627
+        ],
+        [
+          "n_abnormal",
+          0.041364244914635674
+        ],
+        [
+          "spo2_mean",
+          0.04022106468691648
+        ],
+        [
+          "temperature_mean",
+          0.03804792615015444
+        ],
+        [
+          "shock_index",
+          0.03229759952292777
+        ],
+        [
+          "spo2_last",
+          0.022780034367400486
+        ],
+        [
+          "spo2_min",
+          0.019873407642446366
+        ],
+        [
+          "systolic_bp_mean",
+          0.01692055737352481
+        ]
+      ]
+    },
+    "deteriorates_24h": {
+      "accuracy": 0.8592095451155853,
+      "positive_rate": 0.482475764354959,
+      "per_class": {
+        "0": {
+          "precision": 0.8151197604790419,
+          "recall": 0.9414985590778098,
+          "f1": 0.8737630382455202,
+          "support": 3470
+        },
+        "1": {
+          "precision": 0.9247311827956989,
+          "recall": 0.7709428129829985,
+          "f1": 0.8408631153068106,
+          "support": 3235
+        }
+      },
+      "f1_positive": 0.8408631153068106,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            3267,
+            203
+          ],
+          [
+            741,
+            2494
+          ]
+        ]
+      },
+      "roc_auc": 0.9638804680435975,
+      "pr_auc": 0.9630860967120993,
+      "brier": 0.08147864032757997,
+      "baseline_logistic_regression": {
+        "roc_auc": 0.9319825931254426,
+        "pr_auc": 0.9413361337835129
+      },
+      "no_skill_pr_auc": 0.482475764354959
+    },
+    "deteriorates_48h": {
+      "accuracy": 0.9445544554455445,
+      "positive_rate": 0.5566556655665567,
+      "per_class": {
+        "0": {
+          "precision": 0.9767441860465116,
+          "recall": 0.8962779156327544,
+          "f1": 0.9347826086956522,
+          "support": 2015
+        },
+        "1": {
+          "precision": 0.9224777448071216,
+          "recall": 0.98300395256917,
+          "f1": 0.9517795637198623,
+          "support": 2530
+        }
+      },
+      "f1_positive": 0.9517795637198623,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            1806,
+            209
+          ],
+          [
+            43,
+            2487
+          ]
+        ]
+      },
+      "roc_auc": 0.9724353906962604,
+      "pr_auc": 0.9726093124116726,
+      "brier": 0.06785081805462907,
+      "baseline_logistic_regression": {
+        "roc_auc": 0.914383624790357,
+        "pr_auc": 0.9342447472887461
+      },
+      "no_skill_pr_auc": 0.5566556655665567
+    }
+  }
+}

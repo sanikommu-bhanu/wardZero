@@ -1,0 +1,14 @@
+
+*.db
+*.db-shm
+*.db-wal
+*.queue.db
+*.sqlite
+.env
+.venv/
+__pycache__/
+data/
+dist/
+ml/artifacts/*.joblib
+ml/data/generated/
+node_modules/

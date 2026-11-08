@@ -1,0 +1,217 @@
+{
+  "data": "SYNTHETIC - not clinical validation",
+  "seed": 2026,
+  "test_patients": 45,
+  "test_rows": 8865,
+  "positive_label": "deteriorates_24h",
+  "discrimination_24h": {
+    "ml": {
+      "roc_auc": 0.9638804680435975,
+      "pr_auc": 0.9630860967120993,
+      "prevalence": 0.482475764354959,
+      "n": 6705
+    },
+    "news2": {
+      "roc_auc": 0.782344493984651,
+      "pr_auc": 0.7914663274418958,
+      "prevalence": 0.482475764354959,
+      "n": 6705
+    }
+  },
+  "calibration_ml_24h": {
+    "brier": 0.08147864032757997,
+    "brier_reference_constant_prevalence": 0.24969290116505707,
+    "ece": 0.08568095443803352,
+    "bins": [
+      {
+        "bin": "0.0-0.1",
+        "n": 1406,
+        "mean_predicted": 0.04865844986946088,
+        "observed_rate": 0.0
+      },
+      {
+        "bin": "0.1-0.2",
+        "n": 928,
+        "mean_predicted": 0.14848058325165622,
+        "observed_rate": 0.0
+      },
+      {
+        "bin": "0.2-0.3",
+        "n": 334,
+        "mean_predicted": 0.24130151641196187,
+        "observed_rate": 0.0688622754491018
+      },
+      {
+        "bin": "0.3-0.4",
+        "n": 870,
+        "mean_predicted": 0.3603881155153304,
+        "observed_rate": 0.5471264367816092
+      },
+      {
+        "bin": "0.4-0.5",
+        "n": 470,
+        "mean_predicted": 0.4414260713014015,
+        "observed_rate": 0.5148936170212766
+      },
+      {
+        "bin": "0.5-0.6",
+        "n": 251,
+        "mean_predicted": 0.5522749477207738,
+        "observed_rate": 0.43824701195219123
+      },
+      {
+        "bin": "0.6-0.7",
+        "n": 294,
+        "mean_predicted": 0.6437479814209437,
+        "observed_rate": 0.7925170068027211
+      },
+      {
+        "bin": "0.7-0.8",
+        "n": 66,
+        "mean_predicted": 0.7540782538736562,
+        "observed_rate": 0.9848484848484849
+      },
+      {
+        "bin": "0.8-0.9",
+        "n": 81,
+        "mean_predicted": 0.8546845923865657,
+        "observed_rate": 1.0
+      },
+      {
+        "bin": "0.9-1.0",
+        "n": 2005,
+        "mean_predicted": 0.9928480016657192,
+        "observed_rate": 1.0
+      }
+    ]
+  },
+  "calibration_note": "NEWS2 is an ordinal score, not a probability, so calibration/Brier apply to ML only.",
+  "event_patients_test": 27,
+  "control_patients_test": 18,
+  "fixed_alarm_budget": [
+    {
+      "target_alarms_per_patient_day": 0.5,
+      "ml": {
+        "threshold": 0.6805361992228856,
+        "event_patients": 27,
+        "detected": 27,
+        "sensitivity": 1.0,
+        "median_lead_time_h": 15.0,
+        "alarms_per_patient_day": 0.48040712468193386,
+        "false_alarms_per_patient_day": 0.008142493638676845,
+        "monitored_patient_days": 122.8125
+      },
+      "news2": {
+        "threshold": 2.0,
+        "event_patients": 27,
+        "detected": 24,
+        "sensitivity": 0.8888888888888888,
+        "median_lead_time_h": 2.5,
+        "alarms_per_patient_day": 0.3989821882951654,
+        "false_alarms_per_patient_day": 0.13027989821882952,
+        "monitored_patient_days": 122.8125
+      }
+    },
+    {
+      "target_alarms_per_patient_day": 1.0,
+      "ml": {
+        "threshold": 0.447674297689729,
+        "event_patients": 27,
+        "detected": 27,
+        "sensitivity": 1.0,
+        "median_lead_time_h": 25.5,
+        "alarms_per_patient_day": 1.0910941475826972,
+        "false_alarms_per_patient_day": 0.18727735368956744,
+        "monitored_patient_days": 122.8125
+      },
+      "news2": {
+        "threshold": 2.0,
+        "event_patients": 27,
+        "detected": 24,
+        "sensitivity": 0.8888888888888888,
+        "median_lead_time_h": 2.5,
+        "alarms_per_patient_day": 0.3989821882951654,
+        "false_alarms_per_patient_day": 0.13027989821882952,
+        "monitored_patient_days": 122.8125
+      }
+    },
+    {
+      "target_alarms_per_patient_day": 2.0,
+      "ml": {
+        "threshold": 0.4057651472218753,
+        "event_patients": 27,
+        "detected": 27,
+        "sensitivity": 1.0,
+        "median_lead_time_h": 33.5,
+        "alarms_per_patient_day": 1.359796437659033,
+        "false_alarms_per_patient_day": 0.24427480916030533,
+        "monitored_patient_days": 122.8125
+      },
+      "news2": {
+        "threshold": 1.0,
+        "event_patients": 27,
+        "detected": 27,
+        "sensitivity": 1.0,
+        "median_lead_time_h": 3.5,
+        "alarms_per_patient_day": 1.0829516539440203,
+        "false_alarms_per_patient_day": 0.6432569974554707,
+        "monitored_patient_days": 122.8125
+      }
+    },
+    {
+      "target_alarms_per_patient_day": 4.0,
+      "ml": {
+        "threshold": 0.4057651472218753,
+        "event_patients": 27,
+        "detected": 27,
+        "sensitivity": 1.0,
+        "median_lead_time_h": 33.5,
+        "alarms_per_patient_day": 1.359796437659033,
+        "false_alarms_per_patient_day": 0.24427480916030533,
+        "monitored_patient_days": 122.8125
+      },
+      "news2": {
+        "threshold": 1.0,
+        "event_patients": 27,
+        "detected": 27,
+        "sensitivity": 1.0,
+        "median_lead_time_h": 3.5,
+        "alarms_per_patient_day": 1.0829516539440203,
+        "false_alarms_per_patient_day": 0.6432569974554707,
+        "monitored_patient_days": 122.8125
+      }
+    }
+  ],
+  "news2_standard_thresholds": {
+    ">=3": {
+      "threshold": 3.0,
+      "event_patients": 27,
+      "detected": 16,
+      "sensitivity": 0.5925925925925926,
+      "median_lead_time_h": 2.75,
+      "alarms_per_patient_day": 0.24427480916030533,
+      "false_alarms_per_patient_day": 0.06513994910941476,
+      "monitored_patient_days": 122.8125
+    },
+    ">=5": {
+      "threshold": 5.0,
+      "event_patients": 27,
+      "detected": 10,
+      "sensitivity": 0.37037037037037035,
+      "median_lead_time_h": 1.75,
+      "alarms_per_patient_day": 0.08956743002544529,
+      "false_alarms_per_patient_day": 0.0,
+      "monitored_patient_days": 122.8125
+    },
+    ">=7": {
+      "threshold": 7.0,
+      "event_patients": 27,
+      "detected": 7,
+      "sensitivity": 0.25925925925925924,
+      "median_lead_time_h": 1.0,
+      "alarms_per_patient_day": 0.056997455470737916,
+      "false_alarms_per_patient_day": 0.0,
+      "monitored_patient_days": 122.8125
+    }
+  }
+}
